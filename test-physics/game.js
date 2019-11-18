@@ -7,7 +7,7 @@ var config = {
     width: 720,
     height: 1280,
     backgroundColor: 0x000000,
-    scene: [Preload, BlockUpAnimation],
+    scene: [Preload, GameScene],
     pixelArt: true,
     physics: {
       default: "arcade",
