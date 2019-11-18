@@ -10,7 +10,7 @@ export class BlockUpAnimation extends Phaser.Scene {
     }
 
     create() {
-        this.background = this.add.tileSprite(0, 0, config.width, config.height, Images.background.key);
+        this.background = this.add.tileSprite(0, 0, config.width, config.height, Images.mainBackground.key);
         this.background.setOrigin(0, 0);
     }
 

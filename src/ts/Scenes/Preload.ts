@@ -1,5 +1,5 @@
 import {Scenes} from "../Config";
-import {Images} from "../Assets";
+import {Asset, Images} from "../Assets";
 
 
 export class Preload extends Phaser.Scene {
@@ -8,8 +8,9 @@ export class Preload extends Phaser.Scene {
     }
 
     preload() {
-        // TODO: Autocargar TODOS los assets
-        this.load.image(Images.background.key, Images.background.location);
+        Images.toArray().forEach((asset: Asset) => {
+            this.load.image(asset.key, asset.location);
+        });
     }
 
     create () {
