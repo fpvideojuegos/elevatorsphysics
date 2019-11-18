@@ -1,4 +1,5 @@
 import {Scenes} from "../Config";
+import {Images} from "../Assets";
 
 
 export class Preload extends Phaser.Scene {
@@ -7,11 +8,12 @@ export class Preload extends Phaser.Scene {
     }
 
     preload() {
-        this.load.image("background", "assets/images/background.png");
+        // TODO: Autocargar TODOS los assets
+        this.load.image(Images.background.key, Images.background.location);
     }
 
     create () {
-        this.scene.start("BlockUpAnimation");
+        this.scene.start(Scenes.blockUp.name);
     }
 
 }
