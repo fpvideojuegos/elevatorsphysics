@@ -27,19 +27,21 @@ class GameScene extends Phaser.Scene {
           });
 
 
-        
-        var leftElevator = this.add.zone(0, 0, 360, 1280).setOrigin(0);
-        var rightElevator = this.add.zone(360, 0, 360, 1280).setOrigin(0);
-       
+        this.zones = this.add.group();
+        this.leftElevator = this.add.zone(0, 0, 360, 1280).setOrigin(0);
+        this.rightElevator = this.add.zone(360, 0, 360, 1280).setOrigin(0);
+
+        this.zones.add(this.rightElevator);
+        this.zones.add(this.leftElevator);
     
         this.physics.world.enable([this.elevator1, this.elevator2]);
 
 
-        leftElevator.setInteractive().on('pointerdown', () => { 
+        this.leftElevator.setInteractive().on('pointerdown', () => { 
             this.moveElevator(this.elevator1);
         });
 
-        rightElevator.setInteractive().on('pointerdown', () => { 
+        this.rightElevator.setInteractive().on('pointerdown', () => { 
             this.moveElevator(this.elevator2);
         });
     
@@ -47,7 +49,37 @@ class GameScene extends Phaser.Scene {
     }
 
     moveElevator(elevator) {
-        elevator.body.velocity.y = -100;        
+
+        this.zones.getChildren().forEach(zoneElevator => {
+            zoneElevator.disableInteractive();
+        });
+
+        var tween = this.tweens.add({
+            targets: elevator,
+            y: config.height - 1000,
+            // The duration will be a variable that depends on the total weight.
+            duration: 3000,
+            repeat: 0,
+            onComplete: function () {
+                var tween2 = this.tweens.add({
+                    targets: elevator,
+                    y: config.height - 280,
+                    duration: 2000,
+                    repeat: 0,
+                    onComplete: function () {
+
+                        this.zones.getChildren().forEach(zoneElevator => {
+                            zoneElevator.setInteractive();
+                        });
+                    },
+                    callbackScope: this
+                  });
+            },
+            callbackScope: this
+          });
+
+
+        
     }
 
         update () {
