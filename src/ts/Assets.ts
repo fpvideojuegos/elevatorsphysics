@@ -57,11 +57,38 @@ export class SpriteSheets {
             frameWidth: 128
         }
     };
+    public static readonly personAlberto: SpriteSheetAsset = {
+        key: 'alberto',
+        location: `${SPRITE_LOCATION}/albe-char.png`,
+        spriteConfig: {
+            frameHeight: 256,
+            frameWidth: 128
+        }
+    };
+    public static readonly personDavid: SpriteSheetAsset = {
+        key: 'david',
+        location: `${SPRITE_LOCATION}/david-char.png`,
+        spriteConfig: {
+            frameHeight: 256,
+            frameWidth: 128
+        }
+    };
+    public static readonly personCristian: SpriteSheetAsset = {
+        key: 'cristian',
+        location: `${SPRITE_LOCATION}/cris-char.png`,
+        spriteConfig: {
+            frameHeight: 256,
+            frameWidth: 128
+        }
+    };
 
 
     public static personsArray(): Array<SpriteSheetAsset> {
         return [
-            this.personFran
+            this.personFran,
+            this.personAlberto,
+            this.personCristian,
+            this.personDavid
         ];
     }
 
