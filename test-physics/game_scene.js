@@ -39,20 +39,27 @@ class GameScene extends Phaser.Scene {
 
         this.leftElevator.setInteractive().on('pointerdown', () => { 
             this.moveElevator(this.elevator1);
+            this.moveElevatorDefault(this.elevator2);
+            
         });
 
         this.rightElevator.setInteractive().on('pointerdown', () => { 
             this.moveElevator(this.elevator2);
+            this.moveElevatorDefault(this.elevator1);
+
         });
     
        
     }
 
     moveElevator(elevator) {
+        let interval;
+        const that = this;
 
         this.zones.getChildren().forEach(zoneElevator => {
             zoneElevator.disableInteractive();
         });
+        
 
         var tween = this.tweens.add({
             targets: elevator,
@@ -60,6 +67,13 @@ class GameScene extends Phaser.Scene {
             // The duration will be a variable that depends on the total weight.
             duration: 3000,
             repeat: 0,
+
+            current: () => {
+                interval = setInterval(() => {
+                    this.background.tilePositionY -= 1;
+                });
+            },
+
             onComplete: function () {
                 var tween2 = this.tweens.add({
                     targets: elevator,
@@ -67,8 +81,8 @@ class GameScene extends Phaser.Scene {
                     duration: 2000,
                     repeat: 0,
                     onComplete: function () {
-
                         this.zones.getChildren().forEach(zoneElevator => {
+                            clearInterval(interval);
                             zoneElevator.setInteractive();
                         });
                     },
@@ -82,7 +96,40 @@ class GameScene extends Phaser.Scene {
         
     }
 
+
+    moveElevatorDefault(elevator) {
+        let interval;
+        const that = this;
+
+        this.zones.getChildren().forEach(zoneElevator => {
+            zoneElevator.disableInteractive();
+        });
+        
+
+        var tween = this.tweens.add({
+            targets: elevator,
+            y: config.height - 700,
+            // The duration will be a variable that depends on the total weight.
+            duration: 3000,
+            repeat: 0,
+
+            onComplete: function () {
+                var tween2 = this.tweens.add({
+                    targets: elevator,
+                    y: config.height - 280,
+                    duration: 2000,
+                    repeat: 0,
+                    callbackScope: this
+                  });
+            },
+            callbackScope: this
+          });
+
+
+        
+    }
         update () {
+            
 
     }
 }
