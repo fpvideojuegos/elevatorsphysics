@@ -2,6 +2,7 @@ import {SpriteConfigInterface} from "./SpriteConfigInterface";
 import {AtlasAssets, MainImages} from "../../Assets";
 import {Utils} from "../../Utils";
 import Scene = Phaser.Scene;
+import {GameDepth} from "../../Config";
 
 export class Door extends Phaser.Physics.Arcade.Sprite {
     moveType: "stop" | "close" | "open";
@@ -30,6 +31,7 @@ export class Door extends Phaser.Physics.Arcade.Sprite {
         this.setOrigin(0, 0);
         this.setHeightFromBottom(config.scene, config.y);
         config.scene.physics.world.enable(this);
+        this.depth = GameDepth.door;
 
         if (isLeft) {
             this.closePosition = this.x + 142;

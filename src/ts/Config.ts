@@ -19,5 +19,14 @@ export const Config = {
 };
 
 export const GameData = {
-    floorHeight: 255
+    floorHeight: 255,
+    elevatorWithFrameSize: 321,
+};
+
+export const GameDepth = {
+    tiledBackground: 1,
+    mainBackground: 5,
+    door: 4,
+    elevator: 3,
+    elevatorFrames: 5
 };

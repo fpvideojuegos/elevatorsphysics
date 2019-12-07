@@ -3,6 +3,7 @@ import {Door} from "./Door";
 import {AtlasAssets, MainImages} from "../../Assets";
 import Scene = Phaser.Scene;
 import {Utils} from "../../Utils";
+import {GameDepth} from "../../Config";
 
 export class Elevator extends Phaser.Physics.Arcade.Sprite {
     isLeft: boolean;
@@ -21,6 +22,7 @@ export class Elevator extends Phaser.Physics.Arcade.Sprite {
         );
         this.setHeightFromBottom(this.scene, config.y);
         this.setOrigin(0, 0);
+        this.depth = GameDepth.elevator;
 
         this.leftDoor = new Door({
             scene: config.scene,
@@ -36,8 +38,6 @@ export class Elevator extends Phaser.Physics.Arcade.Sprite {
         }, false);
 
         config.scene.physics.world.enable(this);
-        this.leftDoor.depth = 2;
-        this.rightDoor.depth = 2;
     }
 
     addToScene(scene: Scene) {
