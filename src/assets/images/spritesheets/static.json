@@ -1,0 +1,251 @@
+{
+	"textures": [
+		{
+			"image": "static.png",
+			"format": "RGBA8888",
+			"size": {
+				"w": 812,
+				"h": 1731
+			},
+			"scale": 1,
+			"frames": [
+				{
+					"filename": "frame.png",
+					"rotated": false,
+					"trimmed": false,
+					"sourceSize": {
+						"w": 720,
+						"h": 321
+					},
+					"spriteSourceSize": {
+						"x": 0,
+						"y": 0,
+						"w": 720,
+						"h": 321
+					},
+					"frame": {
+						"x": 1,
+						"y": 1,
+						"w": 720,
+						"h": 321
+					}
+				},
+				{
+					"filename": "wall-doors.png",
+					"rotated": false,
+					"trimmed": false,
+					"sourceSize": {
+						"w": 720,
+						"h": 320
+					},
+					"spriteSourceSize": {
+						"x": 0,
+						"y": 0,
+						"w": 720,
+						"h": 320
+					},
+					"frame": {
+						"x": 1,
+						"y": 324,
+						"w": 720,
+						"h": 320
+					}
+				},
+				{
+					"filename": "floor.png",
+					"rotated": false,
+					"trimmed": false,
+					"sourceSize": {
+						"w": 720,
+						"h": 256
+					},
+					"spriteSourceSize": {
+						"x": 0,
+						"y": 0,
+						"w": 720,
+						"h": 256
+					},
+					"frame": {
+						"x": 1,
+						"y": 646,
+						"w": 720,
+						"h": 256
+					}
+				},
+				{
+					"filename": "wall-tiled-back.png",
+					"rotated": false,
+					"trimmed": false,
+					"sourceSize": {
+						"w": 720,
+						"h": 64
+					},
+					"spriteSourceSize": {
+						"x": 0,
+						"y": 0,
+						"w": 720,
+						"h": 64
+					},
+					"frame": {
+						"x": 1,
+						"y": 904,
+						"w": 720,
+						"h": 64
+					}
+				},
+				{
+					"filename": "wall-tiled-transparent.png",
+					"rotated": false,
+					"trimmed": false,
+					"sourceSize": {
+						"w": 720,
+						"h": 64
+					},
+					"spriteSourceSize": {
+						"x": 0,
+						"y": 0,
+						"w": 720,
+						"h": 64
+					},
+					"frame": {
+						"x": 1,
+						"y": 970,
+						"w": 720,
+						"h": 64
+					}
+				},
+				{
+					"filename": "wall-tiled.png",
+					"rotated": false,
+					"trimmed": false,
+					"sourceSize": {
+						"w": 717,
+						"h": 64
+					},
+					"spriteSourceSize": {
+						"x": 0,
+						"y": 0,
+						"w": 717,
+						"h": 64
+					},
+					"frame": {
+						"x": 1,
+						"y": 1036,
+						"w": 717,
+						"h": 64
+					}
+				},
+				{
+					"filename": "cellphone.png",
+					"rotated": false,
+					"trimmed": false,
+					"sourceSize": {
+						"w": 577,
+						"h": 177
+					},
+					"spriteSourceSize": {
+						"x": 0,
+						"y": 0,
+						"w": 577,
+						"h": 177
+					},
+					"frame": {
+						"x": 1,
+						"y": 1102,
+						"w": 577,
+						"h": 177
+					}
+				},
+				{
+					"filename": "elevator-inside.png",
+					"rotated": false,
+					"trimmed": false,
+					"sourceSize": {
+						"w": 230,
+						"h": 290
+					},
+					"spriteSourceSize": {
+						"x": 0,
+						"y": 0,
+						"w": 230,
+						"h": 290
+					},
+					"frame": {
+						"x": 580,
+						"y": 1102,
+						"w": 230,
+						"h": 290
+					}
+				},
+				{
+					"filename": "Weight-screen.png",
+					"rotated": false,
+					"trimmed": false,
+					"sourceSize": {
+						"w": 576,
+						"h": 449
+					},
+					"spriteSourceSize": {
+						"x": 0,
+						"y": 0,
+						"w": 576,
+						"h": 449
+					},
+					"frame": {
+						"x": 1,
+						"y": 1281,
+						"w": 576,
+						"h": 449
+					}
+				},
+				{
+					"filename": "door-left.png",
+					"rotated": false,
+					"trimmed": false,
+					"sourceSize": {
+						"w": 115,
+						"h": 290
+					},
+					"spriteSourceSize": {
+						"x": 0,
+						"y": 0,
+						"w": 115,
+						"h": 290
+					},
+					"frame": {
+						"x": 579,
+						"y": 1394,
+						"w": 115,
+						"h": 290
+					}
+				},
+				{
+					"filename": "door-right.png",
+					"rotated": false,
+					"trimmed": false,
+					"sourceSize": {
+						"w": 115,
+						"h": 290
+					},
+					"spriteSourceSize": {
+						"x": 0,
+						"y": 0,
+						"w": 115,
+						"h": 290
+					},
+					"frame": {
+						"x": 696,
+						"y": 1394,
+						"w": 115,
+						"h": 290
+					}
+				}
+			]
+		}
+	],
+	"meta": {
+		"app": "https://www.codeandweb.com/texturepacker",
+		"version": "3.0",
+		"smartupdate": "$TexturePacker:SmartUpdate:7a7def1ee6ddea064a7a0d99e90726e2:bf346ba99cc5c6b0e33b58f583ee790c:01071a9a68f487558ee3bd8a27b64d84$"
+	}
+}
