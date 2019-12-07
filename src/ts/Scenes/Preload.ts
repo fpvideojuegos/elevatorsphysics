@@ -1,4 +1,4 @@
-import {ImageAsset, Images, SpriteSheets, SpriteSheetAsset} from "../Assets";
+import {Atlas, AtlasAssets} from "../Assets";
 import {Scenes} from "../Scenes";
 
 export class Preload extends Phaser.Scene {
@@ -7,16 +7,17 @@ export class Preload extends Phaser.Scene {
     }
 
     preload() {
-        Images.toArray().forEach((asset: ImageAsset) => {
-            this.load.image(asset.key, asset.location);
-        });
-        SpriteSheets.toArray().forEach((asset: SpriteSheetAsset) => {
-            this.load.spritesheet(asset.key, asset.location, asset.spriteConfig)
+        AtlasAssets.toArray().forEach((atlas: Atlas) => {
+            this.load.multiatlas(
+                atlas.key.value,
+                atlas.jsonFile,
+                atlas.imageFolder
+            );
         });
     }
 
     create () {
-        this.scene.start(Scenes.BlockUpAnimation.name);
+        this.scene.start(Scenes.Test.name);
     }
 
 }

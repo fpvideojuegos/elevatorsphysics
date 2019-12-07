@@ -1,108 +1,74 @@
-import ImageFrameConfig = Phaser.Types.Loader.FileTypes.ImageFrameConfig;
-
-const IMAGE_LOCATION = 'assets/images';
-const SPRITE_LOCATION = 'assets/sprites';
-
 /**
- * General images, not counting sprites.
+ * Atlas files
  */
-export class Images {
-    // Logos
-    public static readonly logo: ImageAsset = {key: 'logo', location: `${IMAGE_LOCATION}/logo/main-logo.png`};
-    public static readonly animatedLogo: ImageAsset = {key: 'animatedLogo', location: `${IMAGE_LOCATION}/logo/main-animado.gif`};
+export class AtlasAssets {
+    public static readonly main: Atlas = {
+        key: {value: 'ElevatorRush'},
+        imageFolder: 'assets/images/spritesheets/',
+        jsonFile: 'assets/images/spritesheets/main.json'
+    };
 
-    // Backgrounds
-    public static readonly testBackground: ImageAsset = {key: 'testBackground', location: `${IMAGE_LOCATION}/background.png`};
-    public static readonly mainBackground: ImageAsset = {key: 'mainBackground', location: `${IMAGE_LOCATION}/frame.png`};
-    // Elevator
-    public static readonly elevatorMainBody: ImageAsset = {key: 'elevatorMainBody', location: `${IMAGE_LOCATION}/elevator/main-body.png`};
-    public static readonly elevatorFrame: ImageAsset = {key: 'elevatorFrame', location: `${IMAGE_LOCATION}/elevator/fronta-frame.png`};
-    public static readonly elevatorLeftDoor: ImageAsset = {key: 'elevatorLeftDoor', location: `${IMAGE_LOCATION}/elevator/left-door.png`};
-    public static readonly elevatorRightDoor: ImageAsset = {key: 'elevatorRightDoor', location: `${IMAGE_LOCATION}/elevator/right-door.png`};
-    // Elevator lights
-    public static readonly lightsOn: ImageAsset = {key: 'lightsOn', location: `${IMAGE_LOCATION}/lights/lights-on.png`};
-    public static readonly lightsOff: ImageAsset = {key: 'lightsOff', location: `${IMAGE_LOCATION}/lights/lights-off.png`};
-    public static readonly lightsUp: ImageAsset = {key: 'lightsUp', location: `${IMAGE_LOCATION}/lights/lights-up.png`};
-    public static readonly lightsDown: ImageAsset = {key: 'lightsDown', location: `${IMAGE_LOCATION}/lights/lights-down.png`};
+    public static toArray(): Array<Atlas> {
+        return [AtlasAssets.main];
+    };
+}
 
+export class MainImages {
+    private static readonly mainAtlas: AtlasKey = {value: 'ElevatorRush'};
 
-    public static toArray(): Array<ImageAsset> {
+    // Characters
+    public static readonly characterAlberto: AtlasImage = {atlas: MainImages.mainAtlas, key: {value: 'characters/albe-char.png'}};
+    public static readonly characterCristian: AtlasImage = {atlas: MainImages.mainAtlas, key: {value:'characters/cris-char.png'}};
+    public static readonly characterDavid: AtlasImage = {atlas: MainImages.mainAtlas, key: {value: 'characters/david-char.png'}};
+    public static readonly characterFernando: AtlasImage = {atlas: MainImages.mainAtlas, key: {value: 'characters/Fer-char.png'}};
+    public static readonly characterFran: AtlasImage = {atlas: MainImages.mainAtlas, key: {value: 'characters/fran-char.png'}};
+    public static readonly characterJuanAntonio: AtlasImage = {atlas: MainImages.mainAtlas, key: {value: 'characters/main-char_JA.png'}};
+
+    // Dynamic
+    public static readonly dynamicBothButtonsOn: AtlasImage = {atlas: MainImages.mainAtlas, key: {value: 'dynamic/Buttons-both.png'}};
+    public static readonly dynamicBothButtonsOff: AtlasImage = {atlas: MainImages.mainAtlas, key: {value: 'dynamic/Buttons-main.png'}};
+    public static readonly dynamicTopButtonOn: AtlasImage = {atlas: MainImages.mainAtlas, key: {value: 'dynamic/Buttons-red.png'}};
+    public static readonly dynamicBottomButtonOn: AtlasImage = {atlas: MainImages.mainAtlas, key: {value: 'dynamic/Buttons-white.png'}};
+    public static readonly dynamicElevatorBothLightsOn: AtlasImage = {atlas: MainImages.mainAtlas, key: {value: 'dynamic/lights-on.png'}};
+    public static readonly dynamicElevatorBothLightsOff: AtlasImage = {atlas: MainImages.mainAtlas, key: {value: 'dynamic/lights-off.png'}};
+    public static readonly dynamicElevatorUpLightOn: AtlasImage = {atlas: MainImages.mainAtlas, key: {value: 'dynamic/lights-up.png'}};
+    public static readonly dynamicElevatorDownLightOn: AtlasImage = {atlas: MainImages.mainAtlas, key: {value: 'dynamic/lights-down.png'}};
+
+    // Static
+    public static readonly elevatorLeftDoor: AtlasImage = {atlas: MainImages.mainAtlas, key: {value: 'static/door-left.png'}};
+    public static readonly elevatorRightDoor: AtlasImage = {atlas: MainImages.mainAtlas, key: {value: 'static/door-right.png'}};
+    public static readonly elevatorInterior: AtlasImage = {atlas: MainImages.mainAtlas, key: {value: 'static/elevator-inside.png'}};
+    public static readonly elevatorFrames: AtlasImage = {atlas: MainImages.mainAtlas, key: {value: 'static/frame.png'}};
+    public static readonly wallDoors: AtlasImage = {atlas: MainImages.mainAtlas, key: {value: 'static/wall-doors.png'}};
+    public static readonly wallTiled: AtlasImage = {atlas: MainImages.mainAtlas, key: {value: 'static/wall-tiled.png'}};
+
+    public static getCharactersArray(): Array<AtlasImage> {
         return [
-            this.logo,
-            this.animatedLogo,
-            this.testBackground,
-            this.mainBackground,
-            this.elevatorMainBody,
-            this.elevatorFrame,
-            this.elevatorLeftDoor,
-            this.elevatorRightDoor,
-            this.lightsOn,
-            this.lightsOff,
-            this.lightsUp,
-            this.lightsDown,
+            this.characterAlberto,
+            this.characterCristian,
+            this.characterDavid,
+            this.characterFernando,
+            this.characterFran,
+            this.characterJuanAntonio
         ];
     }
 }
 
-/**
- * Sprites. They can have animations.
- */
-export class SpriteSheets {
-    // Persons
-    public static readonly personFran: SpriteSheetAsset = {
-        key: 'fran',
-        location: `${SPRITE_LOCATION}/fran-char.png`,
-        spriteConfig: {
-            frameHeight: 256,
-            frameWidth: 128
-        }
-    };
-    public static readonly personAlberto: SpriteSheetAsset = {
-        key: 'alberto',
-        location: `${SPRITE_LOCATION}/albe-char.png`,
-        spriteConfig: {
-            frameHeight: 256,
-            frameWidth: 128
-        }
-    };
-    public static readonly personDavid: SpriteSheetAsset = {
-        key: 'david',
-        location: `${SPRITE_LOCATION}/david-char.png`,
-        spriteConfig: {
-            frameHeight: 256,
-            frameWidth: 128
-        }
-    };
-    public static readonly personCristian: SpriteSheetAsset = {
-        key: 'cristian',
-        location: `${SPRITE_LOCATION}/cris-char.png`,
-        spriteConfig: {
-            frameHeight: 256,
-            frameWidth: 128
-        }
-    };
-
-
-    public static personsArray(): Array<SpriteSheetAsset> {
-        return [
-            this.personFran,
-            this.personAlberto,
-            this.personCristian,
-            this.personDavid
-        ];
-    }
-
-    public static toArray(): Array<SpriteSheetAsset> {
-        const array = this.personsArray();
-        return array;
-    }
+export interface AtlasKey {
+    value: string;
 }
 
-export interface ImageAsset {
-    key: string,
-    location: string
+export interface VisualAssetKey {
+    value: string;
 }
 
-export interface SpriteSheetAsset extends ImageAsset {
-    spriteConfig: ImageFrameConfig
+export interface Atlas {
+    key: AtlasKey;
+    imageFolder: string;
+    jsonFile: string;
+}
+
+export interface AtlasImage {
+    atlas: AtlasKey;
+    key: VisualAssetKey;
 }

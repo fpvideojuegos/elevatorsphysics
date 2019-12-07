@@ -1,7 +1,7 @@
 {
 	"textures": [
 		{
-			"image": "ElevatorRush.png",
+			"image": "main.png",
 			"format": "RGBA8888",
 			"size": {
 				"w": 950,
@@ -10,7 +10,7 @@
 			"scale": 1,
 			"frames": [
 				{
-					"filename": "frame.png",
+					"filename": "static/frame.png",
 					"rotated": false,
 					"trimmed": false,
 					"sourceSize": {
@@ -31,7 +31,7 @@
 					}
 				},
 				{
-					"filename": "door-left.png",
+					"filename": "static/door-left.png",
 					"rotated": false,
 					"trimmed": false,
 					"sourceSize": {
@@ -52,7 +52,7 @@
 					}
 				},
 				{
-					"filename": "lights-down.png",
+					"filename": "dynamic/lights-down.png",
 					"rotated": false,
 					"trimmed": false,
 					"sourceSize": {
@@ -73,7 +73,7 @@
 					}
 				},
 				{
-					"filename": "lights-off.png",
+					"filename": "dynamic/lights-off.png",
 					"rotated": false,
 					"trimmed": false,
 					"sourceSize": {
@@ -94,7 +94,7 @@
 					}
 				},
 				{
-					"filename": "lights-on.png",
+					"filename": "dynamic/lights-on.png",
 					"rotated": false,
 					"trimmed": false,
 					"sourceSize": {
@@ -115,7 +115,7 @@
 					}
 				},
 				{
-					"filename": "lights-up.png",
+					"filename": "dynamic/lights-up.png",
 					"rotated": false,
 					"trimmed": false,
 					"sourceSize": {
@@ -136,7 +136,7 @@
 					}
 				},
 				{
-					"filename": "cris-char.png",
+					"filename": "characters/cris-char.png",
 					"rotated": false,
 					"trimmed": true,
 					"sourceSize": {
@@ -157,7 +157,7 @@
 					}
 				},
 				{
-					"filename": "door-right.png",
+					"filename": "static/door-right.png",
 					"rotated": false,
 					"trimmed": false,
 					"sourceSize": {
@@ -178,7 +178,7 @@
 					}
 				},
 				{
-					"filename": "wall-doors.png",
+					"filename": "static/wall-doors.png",
 					"rotated": false,
 					"trimmed": false,
 					"sourceSize": {
@@ -199,7 +199,7 @@
 					}
 				},
 				{
-					"filename": "Buttons-both.png",
+					"filename": "dynamic/Buttons-both.png",
 					"rotated": false,
 					"trimmed": false,
 					"sourceSize": {
@@ -220,7 +220,7 @@
 					}
 				},
 				{
-					"filename": "Buttons-main.png",
+					"filename": "dynamic/Buttons-main.png",
 					"rotated": false,
 					"trimmed": false,
 					"sourceSize": {
@@ -241,7 +241,7 @@
 					}
 				},
 				{
-					"filename": "fran-char.png",
+					"filename": "characters/fran-char.png",
 					"rotated": false,
 					"trimmed": true,
 					"sourceSize": {
@@ -262,7 +262,7 @@
 					}
 				},
 				{
-					"filename": "main-char-back.png",
+					"filename": "characters/main-char-back.png",
 					"rotated": false,
 					"trimmed": true,
 					"sourceSize": {
@@ -283,7 +283,7 @@
 					}
 				},
 				{
-					"filename": "floor.png",
+					"filename": "static/floor.png",
 					"rotated": false,
 					"trimmed": false,
 					"sourceSize": {
@@ -304,7 +304,7 @@
 					}
 				},
 				{
-					"filename": "main-char.png",
+					"filename": "characters/main-char.png",
 					"rotated": false,
 					"trimmed": true,
 					"sourceSize": {
@@ -325,7 +325,7 @@
 					}
 				},
 				{
-					"filename": "wall-tiled-back.png",
+					"filename": "static/wall-tiled-back.png",
 					"rotated": false,
 					"trimmed": false,
 					"sourceSize": {
@@ -346,7 +346,7 @@
 					}
 				},
 				{
-					"filename": "wall-tiled-transparent.png",
+					"filename": "static/wall-tiled-transparent.png",
 					"rotated": false,
 					"trimmed": false,
 					"sourceSize": {
@@ -367,7 +367,7 @@
 					}
 				},
 				{
-					"filename": "wall-tiled.png",
+					"filename": "static/wall-tiled.png",
 					"rotated": false,
 					"trimmed": false,
 					"sourceSize": {
@@ -388,7 +388,7 @@
 					}
 				},
 				{
-					"filename": "main-char_JA.png",
+					"filename": "characters/main-char_JA.png",
 					"rotated": false,
 					"trimmed": true,
 					"sourceSize": {
@@ -409,7 +409,7 @@
 					}
 				},
 				{
-					"filename": "Fer-char.png",
+					"filename": "characters/Fer-char.png",
 					"rotated": false,
 					"trimmed": true,
 					"sourceSize": {
@@ -430,7 +430,7 @@
 					}
 				},
 				{
-					"filename": "david-char.png",
+					"filename": "characters/david-char.png",
 					"rotated": false,
 					"trimmed": true,
 					"sourceSize": {
@@ -451,7 +451,7 @@
 					}
 				},
 				{
-					"filename": "Weight-screen.png",
+					"filename": "static/Weight-screen.png",
 					"rotated": false,
 					"trimmed": false,
 					"sourceSize": {
@@ -472,7 +472,7 @@
 					}
 				},
 				{
-					"filename": "elevator-inside.png",
+					"filename": "static/elevator-inside.png",
 					"rotated": false,
 					"trimmed": false,
 					"sourceSize": {
@@ -493,7 +493,7 @@
 					}
 				},
 				{
-					"filename": "albe-char.png",
+					"filename": "characters/albe-char.png",
 					"rotated": false,
 					"trimmed": true,
 					"sourceSize": {
@@ -514,7 +514,7 @@
 					}
 				},
 				{
-					"filename": "Buttons-red.png",
+					"filename": "dynamic/Buttons-red.png",
 					"rotated": false,
 					"trimmed": false,
 					"sourceSize": {
@@ -535,7 +535,7 @@
 					}
 				},
 				{
-					"filename": "Buttons-white.png",
+					"filename": "dynamic/Buttons-white.png",
 					"rotated": false,
 					"trimmed": false,
 					"sourceSize": {
@@ -556,7 +556,7 @@
 					}
 				},
 				{
-					"filename": "cellphone.png",
+					"filename": "static/cellphone.png",
 					"rotated": false,
 					"trimmed": false,
 					"sourceSize": {
@@ -582,6 +582,6 @@
 	"meta": {
 		"app": "https://www.codeandweb.com/texturepacker",
 		"version": "3.0",
-		"smartupdate": "$TexturePacker:SmartUpdate:61d1e134397c814f8660188f909b18ae:c574b1c398cfcb8f199bd0bff3edf6f0:897f8e0b02ad3896e5019c1d66fcd827$"
+		"smartupdate": "$TexturePacker:SmartUpdate:f01b2c2534d0045a385f54b51951a5aa:d5db51f3bc7457cee19a73a20d005faf:03f91ab73e0f4667800419161e658c40$"
 	}
 }

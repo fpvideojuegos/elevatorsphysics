@@ -12,8 +12,12 @@ export const Config = {
     physics: {
         default: "arcade",
         arcade:{
-            debug: true
+            debug: false
         }
     },
-    debug: true
+    debug: false
+};
+
+export const GameData = {
+    floorHeight: 255
 };
