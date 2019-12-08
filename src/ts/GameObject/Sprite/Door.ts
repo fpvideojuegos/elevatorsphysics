@@ -1,8 +1,9 @@
 import {SpriteConfigInterface} from "./SpriteConfigInterface";
 import {AtlasAssets, MainImages} from "../../Assets";
 import {Utils} from "../../Utils";
-import Scene = Phaser.Scene;
 import {GameDepth} from "../../Config";
+import {Events} from "../../Data/Events";
+import Scene = Phaser.Scene;
 
 export class Door extends Phaser.Physics.Arcade.Sprite {
     moveType: "stop" | "close" | "open";
@@ -61,6 +62,15 @@ export class Door extends Phaser.Physics.Arcade.Sprite {
         this.setVelocityX(openSpeed);
     }
 
+    openDoor() {
+        this.moveType = 'open';
+        let openSpeed = 100;
+        if (this.isLeft) {
+            openSpeed = -100;
+        }
+        this.setVelocityX(openSpeed);
+    }
+
     update(): void {
         if (this.moveType === "stop") {
             return;
@@ -71,6 +81,13 @@ export class Door extends Phaser.Physics.Arcade.Sprite {
                 if (this.x >= this.closePosition) {
                     this.setVelocityX(0);
                     this.moveType = 'stop';
+                    this.emit(Events.oneDoorClosed.key);
+                }
+            } else {
+                if (this.x <= this.openPosition) {
+                    this.setVelocityX(0);
+                    this.moveType ='stop';
+                    this.emit(Events.oneDoorOpen.key);
                 }
             }
         } else {
@@ -78,6 +95,13 @@ export class Door extends Phaser.Physics.Arcade.Sprite {
                 if (this.x <= this.closePosition) {
                     this.setVelocityX(0);
                     this.moveType = 'stop';
+                    this.emit(Events.oneDoorClosed.key);
+                }
+            } else {
+                if (this.x >= this.openPosition) {
+                    this.setVelocityX(0);
+                    this.moveType = 'stop';
+                    this.emit(Events.oneDoorOpen.key);
                 }
             }
         }

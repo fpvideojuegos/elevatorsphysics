@@ -24,9 +24,9 @@ export const GameData = {
 };
 
 export const GameDepth = {
-    tiledBackground: 1,
+    tiledBackground: 2,
     mainBackground: 5,
     door: 4,
-    elevator: 3,
+    elevator: 1,
     elevatorFrames: 5
 };

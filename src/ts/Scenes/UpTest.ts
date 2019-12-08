@@ -14,17 +14,6 @@ export class UpTest extends Phaser.Scene {
     create() {
         const screenSize: Coordinates = Utils.getSceneSize(this);
 
-        const tiledBackground = this.add.tileSprite(
-            0,
-            0,
-            Config.width,
-            Config.height,
-            AtlasAssets.main.key.value,
-            MainImages.wallTiled.key.value
-        );
-        tiledBackground.setOrigin(0, 0);
-        tiledBackground.depth = GameDepth.tiledBackground;
-
         const mainBackground = this.add.sprite(
             0,
             0,
@@ -35,6 +24,16 @@ export class UpTest extends Phaser.Scene {
         mainBackground.y = Utils.getSceneSize(this).y - GameData.floorHeight - mainBackground.height;
         mainBackground.setDepth(GameDepth.mainBackground);
 
+        const tiledBackground = this.add.tileSprite(
+            0,
+            0,
+            Config.width,
+            Config.height - GameData.floorHeight - mainBackground.height,
+            AtlasAssets.main.key.value,
+            MainImages.wallTiled.key.value
+        );
+        tiledBackground.setOrigin(0, 0);
+        tiledBackground.depth = GameDepth.tiledBackground;
 
         const elevatorFrames = this.add.sprite(
             0,
