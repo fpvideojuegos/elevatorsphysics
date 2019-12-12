@@ -3,7 +3,7 @@ import {Utils} from "../../Utils";
 import {AtlasAssets, AtlasImage, MainImages} from "../../Assets";
 
 export class Person extends Phaser.GameObjects.Sprite {
-    constructor(config: SpriteConfigInterface) {
+    constructor(config: SpriteConfigInterface, depth: number = 0) {
         super(
             config.scene,
             config.x,
@@ -11,6 +11,8 @@ export class Person extends Phaser.GameObjects.Sprite {
             AtlasAssets.main.key.value,
             config.spriteSheetKey.value
         );
+        this.depth = depth;
+        this.setOrigin(0, 0);
         console.log(this);
     }
 

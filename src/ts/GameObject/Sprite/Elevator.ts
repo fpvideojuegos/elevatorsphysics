@@ -2,17 +2,20 @@ import {SpriteConfigInterface} from "./SpriteConfigInterface";
 import {Door} from "./Door";
 import {AtlasAssets, MainImages} from "../../Assets";
 import {Utils} from "../../Utils";
-import {GameDepth} from "../../Config";
+import {GameData, GameDepth} from "../../Config";
 import {Event, Events} from "../../Data/Events";
+import {Person} from "./Person";
 import Scene = Phaser.Scene;
 
 export class Elevator extends Phaser.Physics.Arcade.Sprite {
-    startingHeight: number;
-    leftDoor: Door;
-    rightDoor: Door;
+    private readonly startingHeight: number;
+    private readonly leftDoor: Door;
+    private readonly rightDoor: Door;
 
-    triggeredDoorEvent: boolean = false;
-    movingDown: boolean = false;
+    private triggeredDoorEvent: boolean = false;
+    private movingDown: boolean = false;
+
+    private people: Array<Person>;
 
     constructor(
         config: SpriteConfigInterface
@@ -131,5 +134,39 @@ export class Elevator extends Phaser.Physics.Arcade.Sprite {
     private moveDown(): void {
         this.setVelocityY(150);
         this.movingDown = true;
+    }
+
+    public updatePeople(scene: Scene): void {
+        const scale = 1;
+        const basePerson = new Person({scene: scene, x: 0, y: 0, spriteSheetKey: Person.getRandomPersonSpriteSheet().key});
+        const personHeight = basePerson.height * scale;
+        const personWidth = basePerson.width * scale;
+        const screenSize = Utils.getSceneSize(scene);
+
+        const baseY = screenSize.y - personHeight - GameData.floorHeight;
+        this.people = [];
+        this.people.push(
+            this.getPerson(scene, this.x, baseY, GameDepth.leftPerson),
+            this.getPerson(scene, this.x + ((this.width - personWidth) / 2), baseY, GameDepth.centerPerson),
+            this.getPerson(scene, this.x + (this.width - personWidth), baseY, GameDepth.rightPerson),
+        );
+        this.people.forEach((person: Person) => {
+            person.setScale(scale, scale);
+            scene.add.existing(person);
+        })
+    }
+
+    private getPerson(
+        scene: Scene,
+        x: number,
+        y: number,
+        depth: number
+    ): Person {
+        return new Person({
+            scene: scene,
+            x: x,
+            y: y,
+            spriteSheetKey: Person.getRandomPersonSpriteSheet().key
+        }, depth);
     }
 }

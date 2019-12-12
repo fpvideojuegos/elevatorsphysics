@@ -66,6 +66,9 @@ export class UpTest extends Phaser.Scene {
         rightElevator.addToGroup(this.elevators);
         rightElevator.addToScene(this);
         rightElevator.closeDoors();
+
+        rightElevator.updatePeople(this);
+        leftElevator.updatePeople(this);
     }
 
     update(time: number, delta: number): void {
