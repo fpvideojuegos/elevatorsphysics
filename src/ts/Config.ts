@@ -12,8 +12,24 @@ export const Config = {
     physics: {
         default: "arcade",
         arcade:{
-            debug: true
+            debug: false
         }
     },
-    debug: true
+    debug: false
+};
+
+export const GameData = {
+    floorHeight: 255,
+    elevatorWithFrameSize: 321,
+};
+
+export const GameDepth = {
+    tiledBackground: 2,
+    mainBackground: 6,
+    door: 5,
+    elevator: 1,
+    elevatorFrames: 6,
+    leftPerson: 2,
+    centerPerson: 4,
+    rightPerson: 3
 };

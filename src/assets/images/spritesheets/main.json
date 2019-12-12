@@ -1,0 +1,587 @@
+{
+	"textures": [
+		{
+			"image": "main.png",
+			"format": "RGBA8888",
+			"size": {
+				"w": 950,
+				"h": 1802
+			},
+			"scale": 1,
+			"frames": [
+				{
+					"filename": "static/frame.png",
+					"rotated": false,
+					"trimmed": false,
+					"sourceSize": {
+						"w": 720,
+						"h": 321
+					},
+					"spriteSourceSize": {
+						"x": 0,
+						"y": 0,
+						"w": 720,
+						"h": 321
+					},
+					"frame": {
+						"x": 1,
+						"y": 1,
+						"w": 720,
+						"h": 321
+					}
+				},
+				{
+					"filename": "static/door-left.png",
+					"rotated": false,
+					"trimmed": false,
+					"sourceSize": {
+						"w": 115,
+						"h": 290
+					},
+					"spriteSourceSize": {
+						"x": 0,
+						"y": 0,
+						"w": 115,
+						"h": 290
+					},
+					"frame": {
+						"x": 723,
+						"y": 1,
+						"w": 115,
+						"h": 290
+					}
+				},
+				{
+					"filename": "dynamic/lights-down.png",
+					"rotated": false,
+					"trimmed": false,
+					"sourceSize": {
+						"w": 105,
+						"h": 56
+					},
+					"spriteSourceSize": {
+						"x": 0,
+						"y": 0,
+						"w": 105,
+						"h": 56
+					},
+					"frame": {
+						"x": 840,
+						"y": 1,
+						"w": 105,
+						"h": 56
+					}
+				},
+				{
+					"filename": "dynamic/lights-off.png",
+					"rotated": false,
+					"trimmed": false,
+					"sourceSize": {
+						"w": 105,
+						"h": 56
+					},
+					"spriteSourceSize": {
+						"x": 0,
+						"y": 0,
+						"w": 105,
+						"h": 56
+					},
+					"frame": {
+						"x": 840,
+						"y": 59,
+						"w": 105,
+						"h": 56
+					}
+				},
+				{
+					"filename": "dynamic/lights-on.png",
+					"rotated": false,
+					"trimmed": false,
+					"sourceSize": {
+						"w": 105,
+						"h": 56
+					},
+					"spriteSourceSize": {
+						"x": 0,
+						"y": 0,
+						"w": 105,
+						"h": 56
+					},
+					"frame": {
+						"x": 840,
+						"y": 117,
+						"w": 105,
+						"h": 56
+					}
+				},
+				{
+					"filename": "dynamic/lights-up.png",
+					"rotated": false,
+					"trimmed": false,
+					"sourceSize": {
+						"w": 105,
+						"h": 56
+					},
+					"spriteSourceSize": {
+						"x": 0,
+						"y": 0,
+						"w": 105,
+						"h": 56
+					},
+					"frame": {
+						"x": 840,
+						"y": 175,
+						"w": 105,
+						"h": 56
+					}
+				},
+				{
+					"filename": "characters/cris-char.png",
+					"rotated": false,
+					"trimmed": true,
+					"sourceSize": {
+						"w": 128,
+						"h": 256
+					},
+					"spriteSourceSize": {
+						"x": 12,
+						"y": 7,
+						"w": 102,
+						"h": 249
+					},
+					"frame": {
+						"x": 840,
+						"y": 233,
+						"w": 102,
+						"h": 249
+					}
+				},
+				{
+					"filename": "static/door-right.png",
+					"rotated": false,
+					"trimmed": false,
+					"sourceSize": {
+						"w": 115,
+						"h": 290
+					},
+					"spriteSourceSize": {
+						"x": 0,
+						"y": 0,
+						"w": 115,
+						"h": 290
+					},
+					"frame": {
+						"x": 723,
+						"y": 293,
+						"w": 115,
+						"h": 290
+					}
+				},
+				{
+					"filename": "static/wall-doors.png",
+					"rotated": false,
+					"trimmed": false,
+					"sourceSize": {
+						"w": 720,
+						"h": 320
+					},
+					"spriteSourceSize": {
+						"x": 0,
+						"y": 0,
+						"w": 720,
+						"h": 320
+					},
+					"frame": {
+						"x": 1,
+						"y": 324,
+						"w": 720,
+						"h": 320
+					}
+				},
+				{
+					"filename": "dynamic/Buttons-both.png",
+					"rotated": false,
+					"trimmed": false,
+					"sourceSize": {
+						"w": 69,
+						"h": 96
+					},
+					"spriteSourceSize": {
+						"x": 0,
+						"y": 0,
+						"w": 69,
+						"h": 96
+					},
+					"frame": {
+						"x": 840,
+						"y": 484,
+						"w": 69,
+						"h": 96
+					}
+				},
+				{
+					"filename": "dynamic/Buttons-main.png",
+					"rotated": false,
+					"trimmed": false,
+					"sourceSize": {
+						"w": 69,
+						"h": 96
+					},
+					"spriteSourceSize": {
+						"x": 0,
+						"y": 0,
+						"w": 69,
+						"h": 96
+					},
+					"frame": {
+						"x": 840,
+						"y": 582,
+						"w": 69,
+						"h": 96
+					}
+				},
+				{
+					"filename": "characters/fran-char.png",
+					"rotated": false,
+					"trimmed": true,
+					"sourceSize": {
+						"w": 128,
+						"h": 256
+					},
+					"spriteSourceSize": {
+						"x": 5,
+						"y": 4,
+						"w": 114,
+						"h": 252
+					},
+					"frame": {
+						"x": 723,
+						"y": 585,
+						"w": 114,
+						"h": 252
+					}
+				},
+				{
+					"filename": "characters/main-char-back.png",
+					"rotated": false,
+					"trimmed": true,
+					"sourceSize": {
+						"w": 128,
+						"h": 256
+					},
+					"spriteSourceSize": {
+						"x": 9,
+						"y": 0,
+						"w": 110,
+						"h": 256
+					},
+					"frame": {
+						"x": 839,
+						"y": 680,
+						"w": 110,
+						"h": 256
+					}
+				},
+				{
+					"filename": "static/floor.png",
+					"rotated": false,
+					"trimmed": false,
+					"sourceSize": {
+						"w": 720,
+						"h": 256
+					},
+					"spriteSourceSize": {
+						"x": 0,
+						"y": 0,
+						"w": 720,
+						"h": 256
+					},
+					"frame": {
+						"x": 1,
+						"y": 646,
+						"w": 720,
+						"h": 256
+					}
+				},
+				{
+					"filename": "characters/main-char.png",
+					"rotated": false,
+					"trimmed": true,
+					"sourceSize": {
+						"w": 128,
+						"h": 256
+					},
+					"spriteSourceSize": {
+						"x": 9,
+						"y": 0,
+						"w": 110,
+						"h": 256
+					},
+					"frame": {
+						"x": 723,
+						"y": 839,
+						"w": 110,
+						"h": 256
+					}
+				},
+				{
+					"filename": "static/wall-tiled-back.png",
+					"rotated": false,
+					"trimmed": false,
+					"sourceSize": {
+						"w": 720,
+						"h": 64
+					},
+					"spriteSourceSize": {
+						"x": 0,
+						"y": 0,
+						"w": 720,
+						"h": 64
+					},
+					"frame": {
+						"x": 1,
+						"y": 904,
+						"w": 720,
+						"h": 64
+					}
+				},
+				{
+					"filename": "static/wall-tiled-transparent.png",
+					"rotated": false,
+					"trimmed": false,
+					"sourceSize": {
+						"w": 720,
+						"h": 64
+					},
+					"spriteSourceSize": {
+						"x": 0,
+						"y": 0,
+						"w": 720,
+						"h": 64
+					},
+					"frame": {
+						"x": 1,
+						"y": 970,
+						"w": 720,
+						"h": 64
+					}
+				},
+				{
+					"filename": "static/wall-tiled.png",
+					"rotated": false,
+					"trimmed": false,
+					"sourceSize": {
+						"w": 717,
+						"h": 64
+					},
+					"spriteSourceSize": {
+						"x": 0,
+						"y": 0,
+						"w": 717,
+						"h": 64
+					},
+					"frame": {
+						"x": 1,
+						"y": 1036,
+						"w": 717,
+						"h": 64
+					}
+				},
+				{
+					"filename": "characters/main-char_JA.png",
+					"rotated": false,
+					"trimmed": true,
+					"sourceSize": {
+						"w": 128,
+						"h": 256
+					},
+					"spriteSourceSize": {
+						"x": 9,
+						"y": 0,
+						"w": 110,
+						"h": 256
+					},
+					"frame": {
+						"x": 835,
+						"y": 938,
+						"w": 110,
+						"h": 256
+					}
+				},
+				{
+					"filename": "characters/Fer-char.png",
+					"rotated": false,
+					"trimmed": true,
+					"sourceSize": {
+						"w": 128,
+						"h": 256
+					},
+					"spriteSourceSize": {
+						"x": 9,
+						"y": 3,
+						"w": 110,
+						"h": 253
+					},
+					"frame": {
+						"x": 720,
+						"y": 1097,
+						"w": 110,
+						"h": 253
+					}
+				},
+				{
+					"filename": "characters/david-char.png",
+					"rotated": false,
+					"trimmed": true,
+					"sourceSize": {
+						"w": 128,
+						"h": 256
+					},
+					"spriteSourceSize": {
+						"x": 9,
+						"y": 3,
+						"w": 110,
+						"h": 253
+					},
+					"frame": {
+						"x": 832,
+						"y": 1196,
+						"w": 110,
+						"h": 253
+					}
+				},
+				{
+					"filename": "static/Weight-screen.png",
+					"rotated": false,
+					"trimmed": false,
+					"sourceSize": {
+						"w": 576,
+						"h": 449
+					},
+					"spriteSourceSize": {
+						"x": 0,
+						"y": 0,
+						"w": 576,
+						"h": 449
+					},
+					"frame": {
+						"x": 1,
+						"y": 1352,
+						"w": 576,
+						"h": 449
+					}
+				},
+				{
+					"filename": "static/elevator-inside.png",
+					"rotated": false,
+					"trimmed": false,
+					"sourceSize": {
+						"w": 230,
+						"h": 290
+					},
+					"spriteSourceSize": {
+						"x": 0,
+						"y": 0,
+						"w": 230,
+						"h": 290
+					},
+					"frame": {
+						"x": 579,
+						"y": 1352,
+						"w": 230,
+						"h": 290
+					}
+				},
+				{
+					"filename": "characters/albe-char.png",
+					"rotated": false,
+					"trimmed": true,
+					"sourceSize": {
+						"w": 128,
+						"h": 256
+					},
+					"spriteSourceSize": {
+						"x": 9,
+						"y": 7,
+						"w": 110,
+						"h": 249
+					},
+					"frame": {
+						"x": 811,
+						"y": 1451,
+						"w": 110,
+						"h": 249
+					}
+				},
+				{
+					"filename": "dynamic/Buttons-red.png",
+					"rotated": false,
+					"trimmed": false,
+					"sourceSize": {
+						"w": 69,
+						"h": 96
+					},
+					"spriteSourceSize": {
+						"x": 0,
+						"y": 0,
+						"w": 69,
+						"h": 96
+					},
+					"frame": {
+						"x": 579,
+						"y": 1702,
+						"w": 69,
+						"h": 96
+					}
+				},
+				{
+					"filename": "dynamic/Buttons-white.png",
+					"rotated": false,
+					"trimmed": false,
+					"sourceSize": {
+						"w": 69,
+						"h": 96
+					},
+					"spriteSourceSize": {
+						"x": 0,
+						"y": 0,
+						"w": 69,
+						"h": 96
+					},
+					"frame": {
+						"x": 650,
+						"y": 1702,
+						"w": 69,
+						"h": 96
+					}
+				},
+				{
+					"filename": "static/cellphone.png",
+					"rotated": false,
+					"trimmed": false,
+					"sourceSize": {
+						"w": 577,
+						"h": 177
+					},
+					"spriteSourceSize": {
+						"x": 0,
+						"y": 0,
+						"w": 577,
+						"h": 177
+					},
+					"frame": {
+						"x": 1,
+						"y": 1102,
+						"w": 577,
+						"h": 177
+					}
+				}
+			]
+		}
+	],
+	"meta": {
+		"app": "https://www.codeandweb.com/texturepacker",
+		"version": "3.0",
+		"smartupdate": "$TexturePacker:SmartUpdate:a8083b5e37a06fb1a70326f47a1134b1:8b069643720be427bda4e326613df748:03f91ab73e0f4667800419161e658c40$"
+	}
+}

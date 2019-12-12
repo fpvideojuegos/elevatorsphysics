@@ -1,8 +1,8 @@
-import {SpriteSheetAsset} from "../../Assets";
+import {VisualAssetKey} from "../../Assets";
 
 export interface SpriteConfigInterface {
     scene: Phaser.Scene,
-    x: number,
-    y: number,
-    spriteSheet: SpriteSheetAsset
+    x: number;
+    y: number;
+    spriteSheetKey?: VisualAssetKey;
 }
