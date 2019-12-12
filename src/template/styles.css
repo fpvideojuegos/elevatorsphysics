@@ -1,0 +1,307 @@
+ body {
+	margin: 0;
+	padding: 0;
+ }
+ 
+ #background 
+{ 
+	 left: 0px; 
+	 top: 0px; 
+	 position: relative; 
+	 margin-left: auto; 
+	 margin-right: auto; 
+	 width: 720px;
+	 height: 1280px; 
+	 overflow: hidden;
+	 z-index:0;
+	} 
+
+ #Fondo 
+{ 
+	 left: 0px; 
+	 top: 0px; 
+	 position: absolute; 
+	 width: 720px;
+	 height: 1280px;
+	 z-index:1;
+} 
+
+ #floor 
+{ 
+	 left: 0px; 
+	 top: 1024px; 
+	 position: absolute; 
+	 width: 722px;
+	 height: 257px;
+	 z-index:2;
+} 
+
+ #Palette 
+{ 
+	 left: 18px; 
+	 top: 298px; 
+	 position: absolute; 
+	 width: 684px;
+	 height: 684px;
+	 z-index:3;
+} 
+
+ #walltransparent 
+{ 
+	 left: 1px; 
+	 top: 64px; 
+	 position: absolute; 
+	 width: 720px;
+	 height: 64px;
+	 z-index:4;
+} 
+
+ #nuwall 
+{ 
+	 left: 1px; 
+	 top: 0px; 
+	 position: absolute; 
+	 width: 720px;
+	 height: 64px;
+	 z-index:5;
+} 
+
+ #wallback 
+{ 
+	 left: 1px; 
+	 top: 128px; 
+	 position: absolute; 
+	 width: 720px;
+	 height: 64px;
+	 z-index:6;
+} 
+
+ #wallupper 
+{ 
+	 left: -1px; 
+	 top: -2px; 
+	 position: absolute; 
+	 width: 721px;
+	 height: 706px;
+	 z-index:7;
+} 
+
+ #walldoors 
+{ 
+	 left: 0px; 
+	 top: 704px; 
+	 position: absolute; 
+	 width: 720px;
+	 height: 320px;
+	 z-index:8;
+} 
+
+ #Weightscreen 
+{ 
+	 left: 72px; 
+	 top: 61px; 
+	 position: absolute; 
+	 width: 576px;
+	 height: 449px;
+	 z-index:9;
+} 
+
+ #cellphone 
+{ 
+	 left: 72px; 
+	 top: 1103px; 
+	 position: absolute; 
+	 width: 577px;
+	 height: 177px;
+	 z-index:10;
+} 
+
+ #lightsright 
+{ 
+	 left: 496px; 
+	 top: 612px; 
+	 position: absolute; 
+	 width: 105px;
+	 height: 56px;
+	 z-index:11;
+} 
+
+ #ligthleft 
+{ 
+	 left: 122px; 
+	 top: 612px; 
+	 position: absolute; 
+	 width: 105px;
+	 height: 56px;
+	 z-index:12;
+} 
+
+ #lightsdown 
+{ 
+	 left: 122px; 
+	 top: 612px; 
+	 position: absolute; 
+	 width: 105px;
+	 height: 56px;
+	 z-index:13;
+} 
+
+ #lightsoff 
+{ 
+	 left: 122px; 
+	 top: 612px; 
+	 position: absolute; 
+	 width: 105px;
+	 height: 56px;
+	 z-index:14;
+} 
+
+ #lightson 
+{ 
+	 left: 122px; 
+	 top: 612px; 
+	 position: absolute; 
+	 width: 105px;
+	 height: 56px;
+	 z-index:15;
+} 
+
+ #lightsup 
+{ 
+	 left: 122px; 
+	 top: 612px; 
+	 position: absolute; 
+	 width: 105px;
+	 height: 56px;
+	 z-index:16;
+} 
+
+ #right 
+{ 
+	 left: 432px; 
+	 top: 735px; 
+	 position: absolute; 
+	 width: 230px;
+	 height: 290px;
+	 z-index:17;
+} 
+
+ #left 
+{ 
+	 left: 57px; 
+	 top: 734px; 
+	 position: absolute; 
+	 width: 230px;
+	 height: 290px;
+	 z-index:18;
+} 
+
+ #right_0 
+{ 
+	 left: 172px; 
+	 top: 735px; 
+	 position: absolute; 
+	 width: 115px;
+	 height: 290px;
+	 z-index:19;
+} 
+
+ #left_0 
+{ 
+	 left: 57px; 
+	 top: 735px; 
+	 position: absolute; 
+	 width: 115px;
+	 height: 290px;
+	 z-index:20;
+} 
+
+ #leftcopia 
+{ 
+	 left: 56px; 
+	 top: 735px; 
+	 position: absolute; 
+	 width: 115px;
+	 height: 290px;
+	 z-index:21;
+} 
+
+ #right_1 
+{ 
+	 left: 547px; 
+	 top: 735px; 
+	 position: absolute; 
+	 width: 115px;
+	 height: 290px;
+	 z-index:22;
+} 
+
+ #left_1 
+{ 
+	 left: 432px; 
+	 top: 735px; 
+	 position: absolute; 
+	 width: 115px;
+	 height: 290px;
+	 z-index:23;
+} 
+
+ #frame 
+{ 
+	 left: -1px; 
+	 top: 704px; 
+	 position: absolute; 
+	 width: 726px;
+	 height: 321px;
+	 z-index:24;
+} 
+
+ #Button 
+{ 
+	 left: 324px; 
+	 top: 841px; 
+	 position: absolute; 
+	 width: 73px;
+	 height: 110px;
+	 z-index:25;
+} 
+
+ #Buttonsboth 
+{ 
+	 left: 326px; 
+	 top: 848px; 
+	 position: absolute; 
+	 width: 69px;
+	 height: 96px;
+	 z-index:26;
+} 
+
+ #Buttonsmain 
+{ 
+	 left: 326px; 
+	 top: 848px; 
+	 position: absolute; 
+	 width: 69px;
+	 height: 96px;
+	 z-index:27;
+} 
+
+ #Buttonsred 
+{ 
+	 left: 326px; 
+	 top: 848px; 
+	 position: absolute; 
+	 width: 69px;
+	 height: 96px;
+	 z-index:28;
+} 
+
+ #Buttonswhite 
+{ 
+	 left: 326px; 
+	 top: 848px; 
+	 position: absolute; 
+	 width: 69px;
+	 height: 96px;
+	 z-index:29;
+} 

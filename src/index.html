@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
     <meta charset="UTF-8">
     <title>Ascensor Rush</title>
@@ -8,22 +8,69 @@
     <meta name="MobileOptimized" content="320">
     <meta http-equiv="cleartype" content="on">
     <style>
-        html,
-        body,
-        canvas {
+        html,body,canvas
+        {
+            align-items: center;
+            box-sizing: border-box;
+            display: flex;
+            flex-direction: row;
+            justify-content: center;
             margin: 0 !important;
             padding: 0 !important;
             overflow: hidden !important;
         }
-        body {
-            text-align: center;
+        html::before
+        {
+            position: absolute;
+            content: "";
+            height: 100%;
+            width: 100%;
+            /* croma */
+            /* background: rgb(22,240,22); */
+            background: url("./assets/images/old-assets/Wall/wall-tiled-v2.png");
+            background-size: 50%;
+            filter: blur(5px) brightness(1.4) sepia(.4) invert(1) saturate(5);
+        }
+        canvas , .socialMedia
+        {
+            width: 100%;
+            height: 100%;
+        }
+        canvas
+        {
+            border-left: 2px solid #333;
+            border-right: 2px solid #333;
+            order: 2;
+            z-index: 2;
+            /* min-width: 720px !important; */
+        }
+        .socialMedia
+        {
+            background: rgba(255, 255, 255, .7);
+            flex-shrink: 100    ;
+            z-index: 3;
+        }
+        @media screen and (max-width: 800px){
+            body
+            {
+                flex-direction: column;
+            }
+            canvas
+            {
+                border-left: none;
+                border-right: none;
+                border-top: 3px solid #333;
+                border-bottom: 3px solid #333;
+            }
         }
     </style>
 </head>
-<body>
-<div id="content">
-<script src="vendors.app.bundle.js"></script>
-<script src="bundle.js"></script>
-</div>
+<body style="width: 100%;">
+    <div class="socialMedia" style="order:1;"></div>
+    <div id="content">
+        <script src="vendors.app.bundle.js"></script>
+        <script src="bundle.js"></script>
+    </div>
+    <div class="socialMedia" style="order:3;"></div>
 </body>
 </html>
