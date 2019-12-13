@@ -321,6 +321,18 @@ html::before
     z-index: -1;
 }
 /*----------------------------------------*/
+.ascensor_der,.ascensor_izq
+{
+    position: absolute;
+    width: 216px;
+    z-index: 22;
+}
+.ascensor_der
+{
+    width: 216px;
+    right: 0;
+}
+/*----------------------------------------*/
 @keyframes open_der {
     from{right: 0px}
     to{right: -100px}
