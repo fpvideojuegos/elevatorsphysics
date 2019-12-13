@@ -1,0 +1,339 @@
+@font-face
+{
+    font-family: AscensorRush;
+    src: url("assets_vtemplate/font/04B_30__.TTF");
+}
+*
+{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-shadow: -2px 0 black;
+    font-family: AscensorRush;
+    color: rgb(240, 50, 50);
+}
+
+html
+{
+    width: max-content;
+    height: max-content;
+}
+
+html::before
+{
+    background: url("assets_vtemplate/images/wall-tiled-v2.png");
+    content: "";
+    filter: blur(5px) brightness(1.4) sepia(.4) invert(1) saturate(5);
+    height: 100%;
+    position: absolute;
+    width: 100%;
+}
+
+.m-100
+{
+    height: 100%;
+    width: 100%;
+}
+
+/*----------------------------------------*/
+.presentacion
+{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    top:0;
+    background-color: white;
+    z-index: 15;
+}
+.presentacion .logo
+{
+    background: url("assets_vtemplate/images/main-animado.gif");
+    background-size: contain;
+    box-shadow: 2px 2px 10px rgb(50, 50, 50);
+    border: 3px solid #444;
+    border-radius: 30%;
+    height: 200px;
+    width: 200px;
+}
+/*----------------------------------------*/
+
+.container-game
+{
+    display: flex;
+    flex-direction: row;
+}
+
+.par
+{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    /* background: lime; */
+    background: rgba(250, 250, 250, .8);
+    flex-grow: 1;
+    flex-shrink: 1  ;
+}
+
+.juego
+{
+    width: 1275px;
+    border-left: 2px solid #444;
+    border-right: 2px solid #444;
+}
+/*-------------------------------------------*/
+.HUD
+{
+    height: 100%;
+    position: absolute;
+    width: 432px;
+    z-index: 9;
+}
+
+.weightscreen
+{
+    background: url("assets_vtemplate/images/Weightscreen.png") no-repeat;
+    background-size: cover;
+    display: flex;
+    flex-wrap: wrap;
+    height: 257px;
+    margin: 50px;
+    position: absolute;
+    top: 0;
+    width: 330px;
+}
+
+.weightscreen .grupos
+{
+    /* background-color: red; */
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    height: 55px;
+    margin: 13px 0 0 30px;
+    width: 125px;
+}
+
+.weightscreen .grupos:nth-child(1) .persona, .ascensor:nth-child(1) .grupo .persona:nth-child(1)
+{
+    background: url("assets_vtemplate/sprites/main-char.png") no-repeat;
+    background-size: contain;
+}
+.weightscreen .grupos:nth-child(2) .persona, .ascensor:nth-child(1) .grupo .persona:nth-child(2)
+{
+    background: url("assets_vtemplate/sprites/albe-char.png") no-repeat;
+    background-size: contain;
+}
+.weightscreen .grupos:nth-child(3) .persona, .ascensor:nth-child(1) .grupo .persona:nth-child(3)
+{
+    background: url("assets_vtemplate/sprites/cris-char.png") no-repeat;
+    background-size: contain;
+}
+.weightscreen .grupos:nth-child(4) .persona, .ascensor:nth-child(2) .grupo .persona:nth-child(1)
+{
+    background: url("assets_vtemplate/sprites/david-char.png") no-repeat;
+    background-size: contain;
+}
+.weightscreen .grupos:nth-child(5) .persona, .ascensor:nth-child(2) .grupo .persona:nth-child(2)
+{
+    background: url("assets_vtemplate/sprites/Fer-char.png") no-repeat;
+    background-size: contain;
+}
+.weightscreen .grupos:nth-child(6) .persona, .ascensor:nth-child(2) .grupo .persona:nth-child(3)
+{
+    background: url("assets_vtemplate/sprites/fran-char.png") no-repeat;
+    background-size: contain;
+}
+
+.weightscreen .grupos .persona
+{
+    height: 55px;
+    width: 31px;
+}
+
+.weightscreen .grupos .peso
+{
+    font-size: 1.5em;
+}
+
+
+.telefono
+{
+    background: url("assets_vtemplate/images/cellphone.png") no-repeat;
+    background-size: cover;
+    bottom: 0;
+    margin: 0 30px;
+    height: 114px;
+    position: absolute;
+    width: 372px;
+    text-align: center;
+    font-size: 2em;
+}
+.telefono *
+{
+    position: relative;
+    top: 45px;
+}
+
+
+
+/*-------------------------------------------*/
+
+.frame
+{
+    background: url("assets_vtemplate/images/frame.png") no-repeat;
+    background-size: contain ;
+    z-index: 7;
+}
+
+.frame_door
+{
+    background: url("assets_vtemplate/images/frame_door.png") no-repeat;
+    background-size: contain;
+    height: 182px;
+    position: absolute;
+    top: 434px;
+    width: 432px;
+    z-index: 8;
+}
+
+.ascensores
+{
+    height: 182px;
+    position: absolute;
+    top: 437px;
+    width: 432px;
+}
+
+.ascensor
+{
+    background: url("assets_vtemplate/images/main-body.png") no-repeat;
+    background-size: contain;
+    height: 179px;
+    overflow: hidden;
+    position: absolute;
+    width: 153px;
+    z-index: 4;
+}
+
+
+.ascensor:nth-child(1)
+{
+    left: 24px;
+}
+.ascensor:nth-child(2)
+{
+    right: 19px;
+}
+
+.ascensor .grupo
+{
+    display: flex;
+    flex-direction: row;
+    align-items: flex-end;
+    width: 100%;
+    height: 98%;
+}
+
+.ascensor .grupo .persona
+{
+    position: relative;
+    width: 40%;
+    height: 60%;
+}
+
+.ascensor div[class^=puerta]
+{
+    height: 178px;
+    position: absolute;
+    width: 77px;
+    animation-delay: 2s;
+    animation-fill-mode: forwards;
+    animation-duration: 4s;
+}
+
+.ascensor .puerta_der
+{
+    background: url("assets_vtemplate/images/door_right.png") no-repeat;
+    background-size: cover;
+    right: 0;
+    z-index: 5;
+}
+.ascensor .puerta_izq
+{
+    background: url("assets_vtemplate/images/door_left.png") no-repeat;
+    background-size: cover;
+    z-index: 5;
+}
+
+.containerLightsButtons
+{
+    height: 182px;
+    position: absolute;
+    top: 394px;
+    width: 432px;
+    z-index: 9;
+}
+
+.containerLightsButtons .button
+{
+    background: url("assets_vtemplate/images/buttons.png") no-repeat;
+    background-size: 400%;
+    height: 50px;
+    left: 203px;
+    position: absolute;
+    top: 115px;
+    width: 35px;
+    background-position: -35px 0px ;
+}
+
+.containerLightsButtons .luces
+{
+    background: url("assets_vtemplate/images/lights.png") no-repeat;
+    background-size: 400%;
+    height: 26px;
+    position: absolute;
+    width: 50px;
+    background-position: -50px 0px ;
+}
+
+.containerLightsButtons div:nth-child(2)
+{
+    left: 77px;
+}
+.containerLightsButtons div:nth-child(3)
+{
+    right: 69px;
+}
+
+/*----------------------------------------*/
+.backwall
+{
+    background: url("assets_vtemplate/images/wall-tiled-v2.png");
+    background-size: contain;
+    filter: brightness(.3);
+    height: 100%;
+    position: absolute;
+    top: 0;
+    width: 432px;
+    z-index: -1;
+}
+/*----------------------------------------*/
+@keyframes open_der {
+    from{right: 0px}
+    to{right: -100px}
+}
+@keyframes open_izq {
+    from{left: 0px}
+    to{left: -100px}
+}
+@keyframes close_der {
+    from{right: 0px}
+    to{right: -100px}
+}
+@keyframes close_izq {
+    from{left: 0px}
+    to{left: -100px}
+}
